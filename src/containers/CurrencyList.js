@@ -2,9 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import CurrencyListItem from '../components/CurrencyListItem'
 import PropTypes from 'prop-types'
+import RefreshCurrenciesBtn from './RefreshCurrenciesBtn'
 
 const CurrencyList = ({ filter, data }) => (
   <div>
+    <RefreshCurrenciesBtn />
     <ul className="list-group my-5">
       {Object.keys(data).length ? (
         Object.keys(data).map(itemKey => (
