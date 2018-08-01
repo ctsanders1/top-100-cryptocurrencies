@@ -1,10 +1,5 @@
 import React from 'react'
-import CurrencyFilter from '../containers/CurrencyFilter'
 
-const Main = () => (
-  <div>
-    <CurrencyFilter />
-  </div>
-)
+const Main = ({ children }) => <div>{children}</div>
 
 export default Main
