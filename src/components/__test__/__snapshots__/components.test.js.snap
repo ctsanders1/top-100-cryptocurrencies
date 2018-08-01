@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrencyListItem renders correctly 1`] = `
+<a
+  className="list-group-item list-group-item-action"
+  href="/1"
+  onClick={[Function]}
+>
+  <div>
+    <div>
+      Rank: 
+      1
+    </div>
+    <div>
+      Symbol: 
+      BTC
+    </div>
+    <div>
+      Price: 
+      7561.03107328
+       
+      USD
+    </div>
+    <div>
+      24h percent change: 
+      -2.53
+      %
+    </div>
+  </div>
+</a>
+`;
+
+exports[`Main renders correctly 1`] = `
+<div
+  className="container"
+>
+  <ul
+    className="nav justify-content-center my-5"
+  >
+    <li
+      className="nav-item mr-1"
+    >
+      <a
+        aria-current="page"
+        className="btn btn-outline-primary disabled"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Home
+      </a>
+    </li>
+     
+    <li
+      className="nav-item ml-1"
+    >
+      <a
+        aria-current={null}
+        className="btn btn-outline-primary"
+        href="/settings"
+        onClick={[Function]}
+        style={undefined}
+      >
+        <img
+          alt="gears icon"
+          src="two-big-gears.svg"
+          title="settings"
+          width="20"
+        />
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Nav renders correctly 1`] = `
+<ul
+  className="nav justify-content-center my-5"
+>
+  <li
+    className="nav-item mr-1"
+  >
+    <a
+      aria-current="page"
+      className="btn btn-outline-primary disabled"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Home
+    </a>
+  </li>
+   
+  <li
+    className="nav-item ml-1"
+  >
+    <a
+      aria-current={null}
+      className="btn btn-outline-primary"
+      href="/settings"
+      onClick={[Function]}
+      style={undefined}
+    >
+      <img
+        alt="gears icon"
+        src="two-big-gears.svg"
+        title="settings"
+        width="20"
+      />
+    </a>
+  </li>
+</ul>
+`;

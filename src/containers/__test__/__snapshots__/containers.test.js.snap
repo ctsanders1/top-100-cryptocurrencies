@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConnectedCurrencyFilter renders correctly 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-header"
+  >
+    Change currency
+  </div>
+  <ul
+    className="list-group list-group-flush"
+  >
+    <li
+      className="list-group-item"
+    >
+      <input
+        className="align-middle"
+        defaultChecked={true}
+        id="currencyUSD"
+        name="currency"
+        onClick={[Function]}
+        type="radio"
+        value="USD"
+      />
+      <label
+        className="align-text-top ml-2"
+        htmlFor="currencyUSD"
+      >
+         
+        USD
+      </label>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <input
+        defaultChecked={false}
+        id="currencyEUR"
+        name="currency"
+        onClick={[Function]}
+        type="radio"
+        value="EUR"
+      />
+      <label
+        className="align-text-top ml-2"
+        htmlFor="currencyEUR"
+      >
+         
+        EUR
+      </label>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <input
+        defaultChecked={false}
+        id="currencyCNY"
+        name="currency"
+        onClick={[Function]}
+        type="radio"
+        value="CNY"
+      />
+      <label
+        className="align-text-top ml-2"
+        htmlFor="currencyCNY"
+      >
+         
+        CNY
+      </label>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`CurrencyFilter renders correctly 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-header"
+  >
+    Change currency
+  </div>
+  <ul
+    className="list-group list-group-flush"
+  >
+    <li
+      className="list-group-item"
+    >
+      <input
+        className="align-middle"
+        defaultChecked={false}
+        id="currencyUSD"
+        name="currency"
+        onClick={[Function]}
+        type="radio"
+        value="USD"
+      />
+      <label
+        className="align-text-top ml-2"
+        htmlFor="currencyUSD"
+      >
+         
+        USD
+      </label>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <input
+        defaultChecked={false}
+        id="currencyEUR"
+        name="currency"
+        onClick={[Function]}
+        type="radio"
+        value="EUR"
+      />
+      <label
+        className="align-text-top ml-2"
+        htmlFor="currencyEUR"
+      >
+         
+        EUR
+      </label>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <input
+        defaultChecked={false}
+        id="currencyCNY"
+        name="currency"
+        onClick={[Function]}
+        type="radio"
+        value="CNY"
+      />
+      <label
+        className="align-text-top ml-2"
+        htmlFor="currencyCNY"
+      >
+         
+        CNY
+      </label>
+    </li>
+  </ul>
+</div>
+`;
