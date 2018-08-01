@@ -1,9 +1,10 @@
 import React from 'react'
-import CurrencyFilter from '../containers/CurrencyFilter'
+import Nav from './Nav'
 
-const Main = () => (
-  <div>
-    <CurrencyFilter />
+const Main = ({ children }) => (
+  <div className="container">
+    <Nav />
+    {children}
   </div>
 )
 
