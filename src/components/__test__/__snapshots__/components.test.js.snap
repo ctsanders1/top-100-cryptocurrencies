@@ -1,5 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CurrencyListItem renders correctly 1`] = `
+<a
+  className="list-group-item list-group-item-action"
+  href="/1"
+  onClick={[Function]}
+>
+  <div>
+    <div>
+      Rank: 
+      1
+    </div>
+    <div>
+      Symbol: 
+      BTC
+    </div>
+    <div>
+      Price: 
+      7561.03107328
+       
+      USD
+    </div>
+    <div>
+      24h percent change: 
+      -2.53
+      %
+    </div>
+  </div>
+</a>
+`;
+
 exports[`Main renders correctly 1`] = `
 <div
   className="container"
