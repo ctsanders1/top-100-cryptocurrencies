@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const CurrencyListItem = ({ item, filter }) => (
   <Link
@@ -19,5 +20,10 @@ const CurrencyListItem = ({ item, filter }) => (
     </div>
   </Link>
 )
+
+CurrencyListItem.propTypes = {
+  item: PropTypes.object.isRequired,
+  filter: PropTypes.string.isRequired
+}
 
 export default CurrencyListItem
