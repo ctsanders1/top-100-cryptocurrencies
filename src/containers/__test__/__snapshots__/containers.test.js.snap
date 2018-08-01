@@ -74,6 +74,15 @@ exports[`ConnectedCurrencyFilter renders correctly 1`] = `
 </div>
 `;
 
+exports[`ConnectedRefreshCurrenciesBtn renders correctly 1`] = `
+<button
+  className="btn btn-outline-primary"
+  onClick={[Function]}
+>
+  Get a fresh data
+</button>
+`;
+
 exports[`CurrencyFilter renders correctly 1`] = `
 <div
   className="card"
@@ -146,4 +155,13 @@ exports[`CurrencyFilter renders correctly 1`] = `
     </li>
   </ul>
 </div>
+`;
+
+exports[`RefreshCurrenciesBtn renders correctly 1`] = `
+<button
+  className="btn btn-outline-primary"
+  onClick={undefined}
+>
+  Get a fresh data
+</button>
 `;
