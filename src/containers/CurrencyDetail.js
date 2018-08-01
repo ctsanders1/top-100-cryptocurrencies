@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 const CurrencyDetail = ({ data, filter, bitcoinPrice }) => (
   <div>
@@ -50,6 +51,12 @@ const CurrencyDetail = ({ data, filter, bitcoinPrice }) => (
     )}
   </div>
 )
+
+CurrencyDetail.propTypes = {
+  data: PropTypes.object,
+  bitcoinPrice: PropTypes.number,
+  filter: PropTypes.string.isRequired
+}
 
 export default connect((state, ownProps) => ({
   data: state.data[ownProps.id],
