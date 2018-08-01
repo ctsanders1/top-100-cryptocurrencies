@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import settingsIco from '../assets/img/two-big-gears.svg'
 
 const Nav = () => (
   <ul className="nav justify-content-center my-5">
@@ -20,7 +21,7 @@ const Nav = () => (
         className="btn btn-outline-primary"
         activeClassName="disabled"
       >
-        Settings
+        <img src={settingsIco} alt="gears icon" width="20" title="settings" />
       </NavLink>
     </li>
   </ul>
