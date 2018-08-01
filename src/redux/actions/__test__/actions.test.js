@@ -20,7 +20,7 @@ describe('multiple tests against fetchDataError action creator', () => {
     expect(actual).toEqual(expected)
   })
 
-  it(' action creator genetates correct object on http error', () => {
+  it('action creator genetates correct object on http error', () => {
     const actual = fetchDataError(true, 'something went wrong'),
       expected = {
         type: FETCH_DATA_ERROR,
