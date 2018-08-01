@@ -1,5 +1,6 @@
 export const UPDATE_FILTER = 'UPDATE_FILTER'
 export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS'
+export const FETCH_DATA_ERROR = 'FETCH_DATA_ERROR'
 
 export const updateFilter = currency => ({
   type: UPDATE_FILTER,
@@ -29,9 +30,18 @@ export const fetchData = () => {
         }
 
         dispatch({ type: FETCH_DATA_SUCCESS, payload: data })
+
+        getState().hasHttpError.hasError && dispatch(fetchDataError(false, ''))
       })
       .catch(err => {
-        console.log(err)
+        dispatch(fetchDataError(true, err.toString()))
       })
   }
 }
+
+// currently redundant
+export const fetchDataError = (bool, err) => ({
+  type: FETCH_DATA_ERROR,
+  payload: bool,
+  err: err
+})
