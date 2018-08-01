@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main renders correctly 1`] = `
+<div
+  className="container"
+>
+  <ul
+    className="nav justify-content-center my-5"
+  >
+    <li
+      className="nav-item mr-1"
+    >
+      <a
+        aria-current="page"
+        className="btn btn-outline-primary disabled"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Home
+      </a>
+    </li>
+     
+    <li
+      className="nav-item ml-1"
+    >
+      <a
+        aria-current={null}
+        className="btn btn-outline-primary"
+        href="/settings"
+        onClick={[Function]}
+        style={undefined}
+      >
+        <img
+          alt="gears icon"
+          src="two-big-gears.svg"
+          title="settings"
+          width="20"
+        />
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Nav renders correctly 1`] = `
+<ul
+  className="nav justify-content-center my-5"
+>
+  <li
+    className="nav-item mr-1"
+  >
+    <a
+      aria-current="page"
+      className="btn btn-outline-primary disabled"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Home
+    </a>
+  </li>
+   
+  <li
+    className="nav-item ml-1"
+  >
+    <a
+      aria-current={null}
+      className="btn btn-outline-primary"
+      href="/settings"
+      onClick={[Function]}
+      style={undefined}
+    >
+      <img
+        alt="gears icon"
+        src="two-big-gears.svg"
+        title="settings"
+        width="20"
+      />
+    </a>
+  </li>
+</ul>
+`;
