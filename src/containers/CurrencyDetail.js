@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import RefreshCurrenciesBtn from './RefreshCurrenciesBtn'
 
+// TO DO refactor component, split it into smaller chunks
+// make alerts reusable (CurrencyList also have two alerts)
 class CurrencyDetail extends Component {
   shouldComponentUpdate(nextProps) {
     if (
@@ -17,12 +19,17 @@ class CurrencyDetail extends Component {
   }
 
   render() {
-    const { data, filter, bitcoinPrice } = this.props
+    const { data, filter, bitcoinPrice, err } = this.props
     return (
       <div>
         <RefreshCurrenciesBtn />
-        {data ? (
-          <div className="card mt-5">
+        {err ? (
+          <div className="alert alert-danger" role="alert">
+            We find some dificulties while trying to get data. Please try again
+            later.
+          </div>
+        ) : data ? (
+          <div className="card">
             <ul className="list-group list-group-flush">
               <li className="list-group-item list-group-item-action active">
                 Name: {data.name}
@@ -73,7 +80,9 @@ class CurrencyDetail extends Component {
             </ul>
           </div>
         ) : (
-          <div className="mt-5">Loading...</div>
+          <div className="alert alert-info" role="alert">
+            Loading...
+          </div>
         )}
       </div>
     )
@@ -83,13 +92,17 @@ class CurrencyDetail extends Component {
 CurrencyDetail.propTypes = {
   data: PropTypes.object,
   bitcoinPrice: PropTypes.number,
-  filter: PropTypes.string.isRequired
+  filter: PropTypes.string.isRequired,
+  err: PropTypes.string
 }
 
-export default connect((state, ownProps) => ({
+const mapStateToProps = (state, ownProps) => ({
   data: state.data[ownProps.id],
   bitcoinPrice: state.data['1']
     ? state.data['1'].quotes[state.filter].price
     : null,
-  filter: state.filter
-}))(CurrencyDetail)
+  filter: state.filter,
+  err: state.hasHttpError.err
+})
+
+export default connect(mapStateToProps)(CurrencyDetail)
