@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+## how to run project
+
+In the project directory, install dependencies:
+
+### `npm install`
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -14,6 +20,18 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
+Launches the test runner in the interactive watch mode.
+
+There are 17 tests (unit + snapshoot). Components props have been tested with static prop types checking.
+
 See the section about [running tests](#running-tests) for more information.
 
+### manual tests
+
+App has been tested on:
+
+Mac: Chrome, Safari, Firefox
+
+Linux: Chrome, Firefox
+
+Windows: Chrome, IE11, Firefox
