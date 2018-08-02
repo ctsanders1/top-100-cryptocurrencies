@@ -18,7 +18,6 @@ class CurrencyDetail extends Component {
 
   render() {
     const { data, filter, bitcoinPrice } = this.props
-    console.log('CurrencyDetail')
     return (
       <div>
         <RefreshCurrenciesBtn />

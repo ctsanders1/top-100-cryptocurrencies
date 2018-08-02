@@ -19,7 +19,6 @@ class CurrencyList extends Component {
 
   render() {
     const { data, filter } = this.props
-    console.log('CurrencyList')
     return (
       <div>
         <RefreshCurrenciesBtn />

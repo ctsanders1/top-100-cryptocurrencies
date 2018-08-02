@@ -5,20 +5,19 @@ import CurrencyList from '../containers/CurrencyList'
 import CurrencyFilter from '../containers/CurrencyFilter'
 import CurrencyDetail from '../containers/CurrencyDetail'
 
-const Router = () =>
-  console.log('Router') || (
-    <BrowserRouter>
-      <Main>
-        <Switch>
-          <Route exact path="/" component={CurrencyList} />
-          <Route exact path="/settings" component={CurrencyFilter} />
-          <Route
-            path="/:id"
-            render={({ match }) => <CurrencyDetail id={match.params.id} />}
-          />
-        </Switch>
-      </Main>
-    </BrowserRouter>
-  )
+const Router = () => (
+  <BrowserRouter>
+    <Main>
+      <Switch>
+        <Route exact path="/" component={CurrencyList} />
+        <Route exact path="/settings" component={CurrencyFilter} />
+        <Route
+          path="/:id"
+          render={({ match }) => <CurrencyDetail id={match.params.id} />}
+        />
+      </Switch>
+    </Main>
+  </BrowserRouter>
+)
 
 export default Router
