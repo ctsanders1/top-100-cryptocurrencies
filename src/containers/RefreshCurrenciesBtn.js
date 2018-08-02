@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import { fetchData } from '../redux/actions'
 
@@ -16,7 +15,5 @@ RefreshCurrenciesBtn.propTypes = {
 
 export default connect(
   null,
-  dispatch => ({
-    fetchData: bindActionCreators(fetchData, dispatch)
-  })
+  { fetchData }
 )(RefreshCurrenciesBtn)
