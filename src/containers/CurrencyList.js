@@ -18,11 +18,15 @@ class CurrencyList extends Component {
   }
 
   render() {
-    const { data, filter } = this.props
+    const {
+      data,
+      filter,
+      hasHttpError: { err }
+    } = this.props
     return (
       <div>
         <RefreshCurrenciesBtn />
-        <ul className="list-group my-5">
+        <div className="list-group my-5">
           {Object.keys(data).length ? (
             Object.keys(data).map(itemKey => (
               <CurrencyListItem
@@ -31,10 +35,17 @@ class CurrencyList extends Component {
                 filter={filter}
               />
             ))
+          ) : !err ? (
+            <div className="alert alert-info" role="alert">
+              Loading...
+            </div>
           ) : (
-            <li>Loading...</li>
+            <div className="alert alert-danger" role="alert">
+              We find some dificulties while trying to get data. Please try
+              again later.
+            </div>
           )}
-        </ul>
+        </div>
       </div>
     )
   }
