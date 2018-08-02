@@ -5,6 +5,9 @@ import { configure, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 import colors from 'colors'
 import ConnectedCurrencyFilter, { CurrencyFilter } from '../CurrencyFilter'
+import ConnectedRefreshCurrenciesBtn, {
+  RefreshCurrenciesBtn
+} from '../RefreshCurrenciesBtn'
 
 configure({ adapter: new Adapter() })
 
@@ -32,4 +35,23 @@ it('ConnectedCurrencyFilter renders correctly', () => {
     "is passing but throws warning  although CurrencyFilter component doesn't need key(s) - because it (component) doesn't render array of elements or components."
       .yellow
   )
+})
+
+it('RefreshCurrenciesBtn renders correctly', () => {
+  const tree = renderer.create(<RefreshCurrenciesBtn />).toJSON()
+  expect(tree).toMatchSnapshot()
+})
+
+it('ConnectedRefreshCurrenciesBtn renders correctly', () => {
+  const initiallState = {
+      filter: 'USD',
+      data: {},
+      hasHttpError: { hasError: false, err: '' }
+    },
+    mockStore = configureStore(),
+    store = mockStore(initiallState),
+    wrapper = shallow(<ConnectedRefreshCurrenciesBtn store={store} />),
+    tree = renderer.create(wrapper).toJSON()
+
+  expect(tree).toMatchSnapshot()
 })

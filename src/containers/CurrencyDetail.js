@@ -1,9 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import RefreshCurrenciesBtn from './RefreshCurrenciesBtn'
 
 const CurrencyDetail = ({ data, filter, bitcoinPrice }) => (
   <div>
+    <RefreshCurrenciesBtn />
     {data ? (
       <div className="card mt-5">
         <ul className="list-group list-group-flush">
