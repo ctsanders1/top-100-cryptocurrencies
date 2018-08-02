@@ -28,38 +28,47 @@ class CurrencyDetail extends Component {
                 Name: {data.name}
               </li>
               <li className="list-group-item list-group-item-action">
-                Rank: {data.rank}
+                <small className="font-weight-light">Rank:</small> {data.rank}
               </li>
               <li className="list-group-item list-group-item-action">
-                Symbol: {data.symbol}
+                <small className="font-weight-light">Symbol:</small>{' '}
+                {data.symbol}
               </li>
               <li className="list-group-item list-group-item-action">
-                Price: {data.quotes[filter].price} {filter}
+                <small className="font-weight-light">Price:</small>{' '}
+                {data.quotes[filter].price} {filter}
               </li>
               <li className="list-group-item list-group-item-action">
-                24h volume: {data.quotes[filter].volume_24h}
+                <small className="font-weight-light">24h volume:</small>{' '}
+                {data.quotes[filter].volume_24h}
               </li>
               <li className="list-group-item list-group-item-action">
-                Market cap: {data.quotes[filter].market_cap}
+                <small className="font-weight-light">Market cap:</small>{' '}
+                {data.quotes[filter].market_cap}
               </li>
               <li className="list-group-item list-group-item-action">
-                Price in Bitcoin:{' '}
+                <small className="font-weight-light">Price in Bitcoin:</small>{' '}
                 {bitcoinPrice && data.quotes[filter].price / bitcoinPrice}
               </li>
               <li className="list-group-item list-group-item-action">
-                1h change: {data.quotes[filter].percent_change_1h}%
+                <small className="font-weight-light">1h change:</small>{' '}
+                {data.quotes[filter].percent_change_1h}%
               </li>
               <li className="list-group-item list-group-item-action">
-                24h change: {data.quotes[filter].percent_change_24h}%
+                <small className="font-weight-light">24h change:</small>{' '}
+                {data.quotes[filter].percent_change_24h}%
               </li>
               <li className="list-group-item list-group-item-action">
-                7d change: {data.quotes[filter].percent_change_7d}%
+                <small className="font-weight-light">7d change:</small>{' '}
+                {data.quotes[filter].percent_change_7d}%
               </li>
               <li className="list-group-item list-group-item-action">
-                Total supply: {data.total_supply}
+                <small className="font-weight-light">Total supply:</small>{' '}
+                {data.total_supply}
               </li>
               <li className="list-group-item list-group-item-action">
-                Available supply: {data.circulating_supply}
+                <small className="font-weight-light">Available supply:</small>{' '}
+                {data.circulating_supply}
               </li>
             </ul>
           </div>
