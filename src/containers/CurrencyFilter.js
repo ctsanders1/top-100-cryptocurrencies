@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { updateFilter } from '../redux/actions'
 
 export const CurrencyFilter = ({ updateFilter, currency }) => (
@@ -52,6 +53,11 @@ export const CurrencyFilter = ({ updateFilter, currency }) => (
     </ul>
   </div>
 )
+
+CurrencyFilter.propTypes = {
+  updateFilter: PropTypes.func,
+  currency: PropTypes.string
+}
 
 export default connect(
   state => ({ currency: state.filter }),
