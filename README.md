@@ -26,7 +26,8 @@ There are 17 tests (unit + snapshoot). Components props have been tested with st
 
 See the section about [running tests](#running-tests) for more information.
 
-### manual tests
+
+## Manual tests
 
 App has been tested on:
 

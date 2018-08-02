@@ -25,8 +25,8 @@ class CurrencyDetail extends Component {
         <RefreshCurrenciesBtn />
         {err ? (
           <div className="alert alert-danger" role="alert">
-            We find some dificulties while trying to get data. Please try again
-            later.
+            We have find some unexpected dificulties while trying to get data.
+            Please try again later.
           </div>
         ) : data ? (
           <div className="card">
