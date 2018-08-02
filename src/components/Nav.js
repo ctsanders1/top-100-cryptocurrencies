@@ -21,7 +21,13 @@ const Nav = () => (
         className="btn btn-outline-primary"
         activeClassName="disabled"
       >
-        <img src={settingsIco} alt="gears icon" width="20" title="settings" />
+        <img
+          src={settingsIco}
+          alt="gears icon"
+          width="20"
+          height="20"
+          title="settings"
+        />
       </NavLink>
     </li>
   </ul>

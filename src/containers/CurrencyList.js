@@ -41,8 +41,8 @@ class CurrencyList extends Component {
             </div>
           ) : (
             <div className="alert alert-danger" role="alert">
-              We find some dificulties while trying to get data. Please try
-              again later.
+              We have find some unexpected dificulties while trying to get data.
+              Please try again later.
             </div>
           )}
         </div>
