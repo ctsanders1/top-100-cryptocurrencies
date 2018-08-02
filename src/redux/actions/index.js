@@ -11,7 +11,7 @@ export const fetchData = () => {
   return (dispatch, getState) => {
     Promise.all([
       fetch(
-        'https://api.coinmarketcap.com/v2/0ticker/?limit=100&sort=rank&convert=EUR'
+        'https://api.coinmarketcap.com/v2/ticker/?limit=100&sort=rank&convert=EUR'
       )
         .then(res => res.json())
         .then(d => d.data),

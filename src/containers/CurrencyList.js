@@ -26,7 +26,7 @@ class CurrencyList extends Component {
     return (
       <div>
         <RefreshCurrenciesBtn />
-        <div className="list-group my-5">
+        <div className="list-group">
           {Object.keys(data).length ? (
             Object.keys(data).map(itemKey => (
               <CurrencyListItem
@@ -53,7 +53,8 @@ class CurrencyList extends Component {
 
 CurrencyList.propTypes = {
   data: PropTypes.object.isRequired,
-  filter: PropTypes.string.isRequired
+  filter: PropTypes.string.isRequired,
+  err: PropTypes.string
 }
 
 export default connect(state => state)(CurrencyList)

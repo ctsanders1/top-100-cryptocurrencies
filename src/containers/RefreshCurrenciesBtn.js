@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { fetchData } from '../redux/actions'
 
 export const RefreshCurrenciesBtn = ({ fetchData }) => (
-  <button className="btn btn-outline-primary" onClick={fetchData}>
+  <button className="btn btn-outline-primary mb-5" onClick={fetchData}>
     Get a fresh data
   </button>
 )
