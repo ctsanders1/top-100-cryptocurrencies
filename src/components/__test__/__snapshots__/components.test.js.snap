@@ -7,25 +7,43 @@ exports[`CurrencyListItem renders correctly 1`] = `
   onClick={[Function]}
 >
   <div>
-    <div>
-      Rank: 
-      1
-    </div>
-    <div>
-      Symbol: 
-      BTC
-    </div>
-    <div>
-      Price: 
-      7561.03107328
-       
-      USD
-    </div>
-    <div>
-      24h percent change: 
-      -2.53
-      %
-    </div>
+    <small
+      className="font-weight-light"
+    >
+      Rank:
+    </small>
+     
+    1
+  </div>
+  <div>
+    <small
+      className="font-weight-light"
+    >
+      Symbol:
+    </small>
+     
+    BTC
+  </div>
+  <div>
+    <small
+      className="font-weight-light"
+    >
+      Price:
+    </small>
+     
+    7561.03107328
+     
+    USD
+  </div>
+  <div>
+    <small
+      className="font-weight-light"
+    >
+      24h percent change:
+    </small>
+     
+    -2.53
+    %
   </div>
 </a>
 `;
@@ -34,42 +52,50 @@ exports[`Main renders correctly 1`] = `
 <div
   className="container"
 >
-  <ul
-    className="nav justify-content-center my-5"
+  <div
+    className="row justify-content-md-center"
   >
-    <li
-      className="nav-item mr-1"
+    <div
+      className="col col-lg-6"
     >
-      <a
-        aria-current="page"
-        className="btn btn-outline-primary disabled"
-        href="/"
-        onClick={[Function]}
-        style={Object {}}
+      <ul
+        className="nav justify-content-center my-5"
       >
-        Home
-      </a>
-    </li>
-     
-    <li
-      className="nav-item ml-1"
-    >
-      <a
-        aria-current={null}
-        className="btn btn-outline-primary"
-        href="/settings"
-        onClick={[Function]}
-        style={undefined}
-      >
-        <img
-          alt="gears icon"
-          src="two-big-gears.svg"
-          title="settings"
-          width="20"
-        />
-      </a>
-    </li>
-  </ul>
+        <li
+          className="nav-item mr-1"
+        >
+          <a
+            aria-current="page"
+            className="btn btn-outline-primary disabled"
+            href="/"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Home
+          </a>
+        </li>
+         
+        <li
+          className="nav-item ml-1"
+        >
+          <a
+            aria-current={null}
+            className="btn btn-outline-primary"
+            href="/settings"
+            onClick={[Function]}
+            style={undefined}
+          >
+            <img
+              alt="gears icon"
+              src="two-big-gears.svg"
+              title="settings"
+              width="20"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 `;
 

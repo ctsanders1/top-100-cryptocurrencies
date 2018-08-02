@@ -9,14 +9,18 @@ const CurrencyListItem = ({ item, filter }) => (
     className="list-group-item list-group-item-action"
   >
     <div>
-      <div>Rank: {item.rank}</div>
-      <div>Symbol: {item.symbol}</div>
-      <div>
-        Price: {item['quotes'][filter].price} {filter}
-      </div>
-      <div>
-        24h percent change: {item['quotes'][filter].percent_change_24h}%
-      </div>
+      <small className="font-weight-light">Rank:</small> {item.rank}
+    </div>
+    <div>
+      <small className="font-weight-light">Symbol:</small> {item.symbol}
+    </div>
+    <div>
+      <small className="font-weight-light">Price:</small>{' '}
+      {item['quotes'][filter].price} {filter}
+    </div>
+    <div>
+      <small className="font-weight-light">24h percent change:</small>{' '}
+      {item['quotes'][filter].percent_change_24h}%
     </div>
   </Link>
 )

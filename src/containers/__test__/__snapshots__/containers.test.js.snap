@@ -76,7 +76,7 @@ exports[`ConnectedCurrencyFilter renders correctly 1`] = `
 
 exports[`ConnectedRefreshCurrenciesBtn renders correctly 1`] = `
 <button
-  className="btn btn-outline-primary"
+  className="btn btn-outline-primary mb-5"
   onClick={[Function]}
 >
   Get a fresh data
@@ -159,7 +159,7 @@ exports[`CurrencyFilter renders correctly 1`] = `
 
 exports[`RefreshCurrenciesBtn renders correctly 1`] = `
 <button
-  className="btn btn-outline-primary"
+  className="btn btn-outline-primary mb-5"
   onClick={undefined}
 >
   Get a fresh data
