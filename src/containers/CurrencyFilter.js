@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { updateFilter } from '../redux/actions'
 
 export const CurrencyFilter = ({ updateFilter, currency }) => (
@@ -56,7 +55,5 @@ export const CurrencyFilter = ({ updateFilter, currency }) => (
 
 export default connect(
   state => ({ currency: state.filter }),
-  dispatch => ({
-    updateFilter: bindActionCreators(updateFilter, dispatch)
-  })
+  { updateFilter }
 )(CurrencyFilter)
