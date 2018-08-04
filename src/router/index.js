@@ -7,7 +7,7 @@ import CurrencyDetail from '../containers/CurrencyDetail'
 
 const Router = () => (
   <BrowserRouter>
-    <Main>
+    <Main number={5}>
       <Switch>
         <Route exact path="/" component={CurrencyList} />
         <Route exact path="/settings" component={CurrencyFilter} />
