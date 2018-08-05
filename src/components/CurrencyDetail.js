@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import RefreshCurrenciesBtn from './RefreshCurrenciesBtn'
-import { withDataHoc } from './withDataHoc'
+import RefreshCurrenciesBtn from '../containers/RefreshCurrenciesBtn'
+import { withDataHoc } from '../containers/withDataHoc'
 
 // TO DO refactor component, split it into smaller chunks
 // make alerts reusable (CurrencyList also have two alerts)
@@ -80,11 +80,11 @@ const CurrencyDetail = ({ id, data, filter, hasHttpError: { err } }) => {
   )
 }
 
-// CurrencyDetail.propTypes = {
-//   data: PropTypes.object,
-//   filter: PropTypes.string.isRequired,
-//   id: PropTypes.string,
-//   err: PropTypes.string
-// }
+CurrencyDetail.propTypes = {
+  data: PropTypes.object,
+  filter: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  err: PropTypes.string
+}
 
 export default withDataHoc(CurrencyDetail)

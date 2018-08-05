@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Main from '../components/Main'
-import CurrencyList from '../containers/CurrencyList'
+import CurrencyList from '../components/CurrencyList'
 import CurrencyFilter from '../containers/CurrencyFilter'
-import CurrencyDetail from '../containers/CurrencyDetail'
+import CurrencyDetail from '../components/CurrencyDetail'
 
 const Router = () => (
   <BrowserRouter>

@@ -1,8 +1,8 @@
 import React from 'react'
-import CurrencyListItem from '../components/CurrencyListItem'
+import CurrencyListItem from './CurrencyListItem'
 import PropTypes from 'prop-types'
-import RefreshCurrenciesBtn from './RefreshCurrenciesBtn'
-import { withDataHoc } from './withDataHoc'
+import RefreshCurrenciesBtn from '../containers/RefreshCurrenciesBtn'
+import { withDataHoc } from '../containers/withDataHoc'
 
 const CurrencyList = ({ data, filter, hasHttpError: { err } }) =>
   console.log('CurrencyList') || (
