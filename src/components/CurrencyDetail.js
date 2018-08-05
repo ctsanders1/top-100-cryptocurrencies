@@ -80,9 +80,9 @@ const CurrencyDetail = ({
 )
 
 CurrencyDetail.propTypes = {
-  data: PropTypes.object,
+  selectedCurrency: PropTypes.object,
   filter: PropTypes.string.isRequired,
-  id: PropTypes.string,
+  bitcoinPrice: PropTypes.number,
   err: PropTypes.string
 }
 
