@@ -8,6 +8,8 @@ import { withDataHoc } from './withDataHoc'
 const CurrencyDetail = ({ id, data, filter, hasHttpError: { err } }) => {
   const bitcoinPrice = data[1] ? data[1]['quotes'][filter].price : 0,
     currencyDetailData = data[id] ? data[id] : null
+
+  console.log('CurrencyDetail')
   return (
     <div>
       <RefreshCurrenciesBtn />
@@ -78,11 +80,11 @@ const CurrencyDetail = ({ id, data, filter, hasHttpError: { err } }) => {
   )
 }
 
-CurrencyDetail.propTypes = {
-  data: PropTypes.object,
-  filter: PropTypes.string.isRequired,
-  id: PropTypes.string,
-  err: PropTypes.string
-}
+// CurrencyDetail.propTypes = {
+//   data: PropTypes.object,
+//   filter: PropTypes.string.isRequired,
+//   id: PropTypes.string,
+//   err: PropTypes.string
+// }
 
 export default withDataHoc(CurrencyDetail)
