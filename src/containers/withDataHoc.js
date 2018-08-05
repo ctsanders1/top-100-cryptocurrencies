@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { memoizedStateSelector } from '../redux/selectors'
-function getDisplayName(WrappedComponent) {
-  return WrappedComponent.displayName || WrappedComponent.name || 'Component'
-}
+import { getDisplayName } from '../utils'
 
 export const withDataHoc = Comp => {
   /* eslint no-unused-vars: 0 */
