@@ -1,12 +1,14 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
+import { ConnectedRouter } from 'connected-react-router'
+import { history } from '../redux/store'
 import Main from '../components/Main'
 import CurrencyList from '../components/CurrencyList'
 import CurrencyFilter from '../containers/CurrencyFilter'
 import CurrencyDetail from '../components/CurrencyDetail'
 
 const Router = () => (
-  <BrowserRouter>
+  <ConnectedRouter history={history}>
     <Main>
       <Switch>
         <Route exact path="/" component={CurrencyList} />
@@ -17,7 +19,7 @@ const Router = () => (
         />
       </Switch>
     </Main>
-  </BrowserRouter>
+  </ConnectedRouter>
 )
 
 export default Router
