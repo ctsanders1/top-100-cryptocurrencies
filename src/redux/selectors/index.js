@@ -9,6 +9,12 @@ export const memoizedStateSelector = createDeepEqualSelector(
   state => ({
     data: stateSelector(state.data),
     filter: stateSelector(state.filter),
-    hasHttpError: stateSelector(state.hasHttpError)
+    hasHttpError: stateSelector(state.hasHttpError),
+    selectedCurrency: stateSelector(state.data)[
+      Number(stateSelector(state.router.location.pathname).split('/')[1])
+    ],
+    bitcoinPrice:
+      stateSelector(state.data)[1] &&
+      stateSelector(state.data)[1]['quotes'][stateSelector(state.filter)].price
   })
 )

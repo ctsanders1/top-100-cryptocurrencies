@@ -13,10 +13,7 @@ const Router = () => (
       <Switch>
         <Route exact path="/" component={CurrencyList} />
         <Route exact path="/settings" component={CurrencyFilter} />
-        <Route
-          path="/:id"
-          render={({ match }) => <CurrencyDetail id={match.params.id} />}
-        />
+        <Route path="/:id" component={CurrencyDetail} />
       </Switch>
     </Main>
   </ConnectedRouter>

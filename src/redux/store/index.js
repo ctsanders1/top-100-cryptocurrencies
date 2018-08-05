@@ -11,12 +11,7 @@ const composeEnhancers = composeWithDevTools({})
 
 export const store = createStore(
   connectRouter(history)(reducers),
-  composeEnhancers(
-    applyMiddleware(
-      routerMiddleware(history), // for dispatching history actions
-      ReduxThunk
-    )
-  )
+  composeEnhancers(applyMiddleware(routerMiddleware(history), ReduxThunk))
 )
 
 store.dispatch(fetchData())
