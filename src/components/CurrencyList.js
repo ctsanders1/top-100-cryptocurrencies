@@ -3,6 +3,7 @@ import CurrencyListItem from './CurrencyListItem'
 import PropTypes from 'prop-types'
 import RefreshCurrenciesBtn from '../containers/RefreshCurrenciesBtn'
 import { withDataHoc } from '../containers/withDataHoc'
+import Alert from './Alert'
 
 const CurrencyList = ({ data, filter, hasHttpError: { err } }) => (
   <div>
@@ -17,14 +18,12 @@ const CurrencyList = ({ data, filter, hasHttpError: { err } }) => (
           />
         ))
       ) : !err ? (
-        <div className="alert alert-info" role="alert">
-          Loading...
-        </div>
+        <Alert type="info">Loading...</Alert>
       ) : (
-        <div className="alert alert-danger" role="alert">
+        <Alert type="danger">
           We have find some unexpected dificulties while trying to get data.
           Please try again later.
-        </div>
+        </Alert>
       )}
     </div>
   </div>
