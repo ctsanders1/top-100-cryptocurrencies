@@ -4,9 +4,13 @@ import { UPDATE_FILTER } from '../../actions'
 describe('multiple tests against store', () => {
   it('store.getState() returns initiall state', () => {
     const initiallState = {
-      filter: 'USD',
       data: {},
-      hasHttpError: { hasError: false, err: '' }
+      filter: 'USD',
+      hasHttpError: { err: '', hasError: false },
+      router: {
+        action: 'POP',
+        location: { hash: '', pathname: '/', search: '', state: undefined }
+      }
     }
 
     expect(store.getState()).toEqual(initiallState)
@@ -15,9 +19,13 @@ describe('multiple tests against store', () => {
   it('store.dispatch(action) updates store', () => {
     const action = { type: UPDATE_FILTER, payload: 'EUR' }
     const expected = {
-      filter: 'EUR',
       data: {},
-      hasHttpError: { hasError: false, err: '' }
+      filter: 'EUR',
+      hasHttpError: { err: '', hasError: false },
+      router: {
+        action: 'POP',
+        location: { hash: '', pathname: '/', search: '', state: undefined }
+      }
     }
 
     store.dispatch(action)
