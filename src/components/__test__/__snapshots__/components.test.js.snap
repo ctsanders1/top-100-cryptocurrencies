@@ -87,6 +87,7 @@ exports[`Main renders correctly 1`] = `
           >
             <img
               alt="gears icon"
+              height="20"
               src="two-big-gears.svg"
               title="settings"
               width="20"
@@ -129,6 +130,7 @@ exports[`Nav renders correctly 1`] = `
     >
       <img
         alt="gears icon"
+        height="20"
         src="two-big-gears.svg"
         title="settings"
         width="20"
