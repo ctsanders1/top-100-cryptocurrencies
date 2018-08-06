@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import RefreshCurrenciesBtn from '../containers/RefreshCurrenciesBtn'
 import { withDataHoc } from '../containers/withDataHoc'
+import Alert from './Alert'
 
 // TO DO refactor component, split it into smaller chunks
 // make alerts reusable (CurrencyList also have two alerts)
@@ -14,10 +15,10 @@ const CurrencyDetail = ({
   <div>
     <RefreshCurrenciesBtn />
     {err ? (
-      <div className="alert alert-danger" role="alert">
+      <Alert type="danger">
         We have find some unexpected dificulties while trying to get data.
         Please try again later.
-      </div>
+      </Alert>
     ) : selectedCurrency ? (
       <div className="card">
         <ul className="list-group list-group-flush">
@@ -72,9 +73,7 @@ const CurrencyDetail = ({
         </ul>
       </div>
     ) : (
-      <div className="alert alert-info" role="alert">
-        Loading...
-      </div>
+      <Alert type="info">Loading...</Alert>
     )}
   </div>
 )
