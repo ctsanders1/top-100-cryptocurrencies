@@ -1,12 +1,12 @@
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction'
-import { createBrowserHistory } from 'history'
+import { createHashHistory } from 'history'
 import { connectRouter, routerMiddleware } from 'connected-react-router'
 import ReduxThunk from 'redux-thunk'
 import reducers from '../reducers'
 import { fetchData } from '../actions'
 
-export const history = createBrowserHistory()
+export const history = createHashHistory()
 const composeEnhancers = composeWithDevTools({})
 
 export const store = createStore(
