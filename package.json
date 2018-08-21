@@ -2,11 +2,13 @@
   "name": "top-100-cryptocurrencies",
   "version": "0.1.0",
   "author": "Danko Milutinovic",
+  "homepage": "https://dankoknad.github.io/top-100-cryptocurrencies",
   "private": false,
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "connected-react-router": "^4.3.0",
+    "gh-pages": "^1.2.0",
     "history": "^4.7.2",
     "lodash.isequal": "^4.5.0",
     "react": "^16.4.1",
@@ -22,6 +24,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
